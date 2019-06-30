@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>EXPR-JS</title>
+</head>
+<body>
+
+<h1>EXPR-JS V1.0</h1>
+<label>Ingresa un valor: </label>
+<input type="tel" id="validar"> <span id="res"></span>
+<h6>&copy; 2019. Weblarc.com. Desarrollado por: <a href="https://github.com/luisarcia" target="_blank">Luis Arcia.</a></h6>
+
+<script type="text/javascript" src="exprjs.js"></script>
+
+<script type="text/javascript">
+	document.getElementById('validar').addEventListener('keyup', function() {
+		var valor 	= this.value;
+		let res 	= EXPR.celular(valor, 'PA', 'celular') ? '✅' : '❎';
+
+		document.getElementById('res').innerHTML = res ;
+	});
+</script>
+</body>
+</html>
